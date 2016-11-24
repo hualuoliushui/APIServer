@@ -25,12 +25,12 @@ namespace ApplicationServer_API.Services.CommonServices
                 return Status.PERMISSION_DENIED;
             }
             //检查会议状态:是否 正在开启
-            if (!IsOpening_meeting(meetingID))
+            if (IsOpening_meeting(meetingID))
             {
-                return Status.MEETING_DOES_NOT_OPEN;
+                //设置信息
+                return setInfo(deviceVo, meetingID, ref checkUserModel);              
             }
-            //设置信息
-            return setInfo(deviceVo, meetingID, ref checkUserModel);
+            return Status.MEETING_DOES_NOT_OPEN;
         }
 
         public Status setInfo(DeviceVO deviceVo, int meetingID,

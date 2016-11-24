@@ -38,10 +38,10 @@ namespace ApplicationServer_API.Services.CommonServices
 
             if (voteOptionVolist == null)
                 return Status.FAILURE;
-
-            int resultNum = 0;
+     
             foreach (VoteOptionVO voteOptionVo in voteOptionVolist)
             {
+                int resultNum = 0;
                 wherelist.Clear();
                 wherelist.Add("voteOptionID", voteOptionVo.voteOptionID);
                 List<VoteOptionPersonResultVO> voteOptionPersonResultVolist =

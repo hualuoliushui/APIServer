@@ -40,11 +40,11 @@ namespace APIServer.Services
         public static bool IsNotOpen_meeting(int meetingID)
         {
             int status = getMeetingStatus(meetingID);
-            if (status == -1 || status != 1)
+            if (status == 1 )
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         /// <summary>
@@ -55,11 +55,11 @@ namespace APIServer.Services
         public static bool IsOpening_meeting(int meetingID)
         {
             int status = getMeetingStatus(meetingID);
-            if (status == -1 || status != 2)
+            if (status == 2)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         /// <summary>
@@ -67,14 +67,14 @@ namespace APIServer.Services
         /// </summary>
         /// <param name="meetingID"></param>
         /// <returns></returns>
-        public static bool IsOpend_meeting(int meetingID)
+        public static bool IsOpened_meeting(int meetingID)
         {
             int status = getMeetingStatus(meetingID);
-            if (status == -1 || status != 16)
+            if (status == 16)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         #endregion

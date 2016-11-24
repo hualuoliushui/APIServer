@@ -26,22 +26,26 @@ namespace ApplicationServer_API.Services.HostModels
         {
             MeetingDAO meetingDao = Factory.getInstance<MeetingDAO>();
 
-            if (!IsNotOpen_meeting(meetingID))
+            if (IsNotOpen_meeting(meetingID))
+            {
+                Dictionary<string, object> parameterlist = new Dictionary<string, object>();
+                //设置为开会状态
+                parameterlist.Add("meetingStatus", 2);
+
+                int changedNum = meetingDao.update(parameterlist, meetingID);
+
+                if (changedNum == 1)
+                {
+                    return Status.SUCCESS;
+                }
+                return Status.FAILURE;
+            }
+            else
             {
                 return Status.MEETING_HAS_BEEN_OPENED;
             }
 
-            Dictionary<string, object> parameterlist = new Dictionary<string, object>();
-            //设置为开会状态
-            parameterlist.Add("meetingStatus", 2);
-
-            int changedNum = meetingDao.update(parameterlist, meetingID);
-
-            if (changedNum == 1)
-            {
-                return Status.SUCCESS;
-            }
-            return Status.FAILURE;
+            
         }
     }
 }

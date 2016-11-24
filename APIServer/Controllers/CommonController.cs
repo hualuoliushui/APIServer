@@ -30,7 +30,7 @@ namespace ApplicationServer_API.Controllers
             RequestMeetingListService service = new RequestMeetingListService();
             Status status = service.run(IMEI, out list);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = list;
 
             return respond;
@@ -47,7 +47,7 @@ namespace ApplicationServer_API.Controllers
             CheckUserService service = new CheckUserService();
             Status status = service.run(IMEI, meetingID, out checkUserModel);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = checkUserModel;
 
             return respond;
@@ -71,7 +71,7 @@ namespace ApplicationServer_API.Controllers
             SignInService service = new SignInService();
             Status status = service.run(IMEI, meetingID, out signInModel);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = signInModel;
 
             return respond;
@@ -88,7 +88,7 @@ namespace ApplicationServer_API.Controllers
             FetchVoteListService service = new FetchVoteListService();
             Status status = service.run(IMEI, meetingID, out votelist);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = votelist;
 
             return respond;
@@ -102,7 +102,7 @@ namespace ApplicationServer_API.Controllers
             UploadVoteResultService service = new UploadVoteResultService();
             Status status = service.run(data.voteID,data.userID,data.resultMap);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = "";
 
             return respond;
@@ -119,7 +119,7 @@ namespace ApplicationServer_API.Controllers
             FetchVoteResultService service = new FetchVoteResultService();
             Status status = service.run(voteID, out fetchVoteResultlist);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = fetchVoteResultlist;
 
             return respond;

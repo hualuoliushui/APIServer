@@ -55,23 +55,25 @@ namespace ApplicationServer_API.Services.HostModels
 
             MeetingDAO meetingDao = Factory.getInstance<MeetingDAO>();
             //检查会议是否为 开启状态
-            if (!IsOpening_meeting(meetingID))
+            if (IsOpening_meeting(meetingID))
             {
+                return startOrEndVote(voteID, startOrEnd); 
+            }else
                 return Status.MEETING_HAS_BEEN_OPENED;
-            }
 
-            return startOrEndVote(voteID, startOrEnd);
+            
         }
-        public Status startOrEndVote(int voteID,int voteStatus)
+        public Status startOrEndVote(int voteID, int startOrEnd)
         {
             VoteVO voteVo = getVote(voteID);
-            if (!validateStatus(voteVo, voteStatus))
+            if (!validateStatus(voteVo, startOrEnd))
             {
                 return Status.FAILURE;
             }
             VoteDAO voteDao = Factory.getInstance<VoteDAO>();
 
             Dictionary<string, object> parameterlist = new Dictionary<string, object>();
+            int voteStatus = startOrEnd == 0 ? 2 : 16;
             //设置表决为voteStatus状态
             parameterlist.Add("voteStatus", voteStatus);
 

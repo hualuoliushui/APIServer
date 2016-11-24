@@ -36,9 +36,7 @@ namespace ApplicationServer_API.Services.CommonServices
             }
 
             //设置信息
-
-
-            return Status.SUCCESS;
+            return setInfo(deviceVo, meetingID,ref signInModel);
         }
 
         /// <summary>
@@ -124,7 +122,7 @@ namespace ApplicationServer_API.Services.CommonServices
                             agendaSpeaker = personVo.personName
                         });
                     //记录主讲人信息
-                    speakers.Add(agendaVo.agendaID,personVo.personID);
+                    speakers.Add(agendaVo.agendaIndex,personVo.personID);
                 }
             }
 

@@ -54,6 +54,13 @@ namespace ApplicationServer_API.Services.CommonServices
             if (selectIDs == null)
                 return Status.FAILURE;
 
+            //判断选项个数是否合理 voteType 0:不限，N：最多选择N个（N>0)
+            if(voteVo.voteType != 0
+                && voteVo.voteType < selectIDs.Count)
+            {
+                return Status.FAILURE;
+            }
+
             VoteOptionPersonResultDAO voteOptionPersonResultDao = 
                 Factory.getInstance<VoteOptionPersonResultDAO>();
 

@@ -20,28 +20,28 @@ namespace ApplicationServer_API.Services.HostModels
             }
 
             return endMeeting(meetingID);
+
         }
         public Status endMeeting(int meetingID)
         {
             MeetingDAO meetingDao = Factory.getInstance<MeetingDAO>();
 
             //检查会议是否为 开启状态
-            if (!IsOpening_meeting(meetingID))
+            if (IsOpening_meeting(meetingID))
             {
+                Dictionary<string, object> parameterlist = new Dictionary<string, object>();
+                //设置为结束会议状态
+                parameterlist.Add("meetingStatus", 16);
+
+                int changedNum = meetingDao.update(parameterlist, meetingID);
+
+                if (changedNum == 1)
+                {
+                    return Status.SUCCESS;
+                }
+                return Status.FAILURE;
+            }else
                 return Status.MEETING_HAS_BEEN_OPENED;
-            }
-
-            Dictionary<string, object> parameterlist = new Dictionary<string, object>();
-            //设置为结束会议状态
-            parameterlist.Add("meetingStatus", 16);
-
-            int changedNum = meetingDao.update(parameterlist, meetingID);
-
-            if (changedNum == 1)
-            {
-                return Status.SUCCESS;
-            }
-            return Status.FAILURE;
         }
     }
 }

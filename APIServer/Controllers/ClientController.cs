@@ -14,12 +14,12 @@ namespace ApplicationServer_API.Controllers
     public class ClientController : ApiController
     {
         [HttpGet]
-        public Services.Respond resetMeetingState(int meetingID)
+        public Services.Respond reset(int meetingID)
         {
             Services.Respond respond = new Services.Respond();
             MeetingDAO meetingDao = Factory.getInstance<MeetingDAO>();
             Dictionary<string, object> list = new Dictionary<string, object>();
-            list.Add("meetingState", 1);
+            list.Add("meetingStatus", 1);
             if (meetingDao.update(list,meetingID)!=1)
             {
                 respond.code = -1;
@@ -44,7 +44,7 @@ namespace ApplicationServer_API.Controllers
                 foreach (VoteVO vote in votes)
                 {
                     list.Clear();
-                    list.Add("voteState", 1);
+                    list.Add("voteStatus", 1);
                     voteDao.update(list,vote.voteID);
 
                     list.Clear();

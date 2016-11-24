@@ -23,7 +23,7 @@ namespace ApplicationServer_API.Controllers
             StartMeetingService service = new StartMeetingService();
             Status status = service.run(IMEI, meetingID);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = "";
 
             return respond;
@@ -37,7 +37,7 @@ namespace ApplicationServer_API.Controllers
             EndMeetingService service = new EndMeetingService();
             Status status = service.run(IMEI, meetingID);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = "";
 
             return respond;
@@ -54,7 +54,7 @@ namespace ApplicationServer_API.Controllers
             CheckUpdateModel checkUpdateModel;
             Status status = service.run(IMEI, meetingID,out checkUpdateModel);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = checkUpdateModel;
 
             return respond;
@@ -69,7 +69,7 @@ namespace ApplicationServer_API.Controllers
             StartOrEndVoteService service = new StartOrEndVoteService();
             Status status = service.run(IMEI, meetingID,voteID,startOrEnd);
             respond.code = (int)status;
-            respond.msg = status.ToString();
+            respond.msg = Message.msgs[respond.code];
             respond.result = "";
 
             return respond;
