@@ -185,6 +185,7 @@
     <Compile Include="Services\CommonServices\RequestMeetingListService.cs" />
     <Compile Include="Services\CommonServices\SignInService.cs" />
     <Compile Include="Services\CommonServices\UploadVoteResultService.cs" />
+    <Compile Include="Services\FileConvert.cs" />
     <Compile Include="Services\HostServices\CheckUpdateService.cs" />
     <Compile Include="Services\HostServices\EndMeetingService.cs" />
     <Compile Include="Services\HostServices\StartMeetingService.cs" />
