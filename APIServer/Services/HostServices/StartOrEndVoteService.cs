@@ -8,7 +8,7 @@ using DAL.DAOVO;
 using APIServer.Services;
 using APIServer.Models;
 
-namespace ApplicationServer_API.Services.HostModels
+namespace APIServer.Services.HostModels
 {
 
     public class StartOrEndVoteService : Service

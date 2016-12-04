@@ -9,12 +9,12 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Text;
 
-using ApplicationServer_API.Services;
-using ApplicationServer_API.Services.CommonServices;
+using APIServer.Services;
+using APIServer.Services.CommonServices;
 using APIServer.Models.CommonModels;
 using APIServer.Models;
 
-namespace ApplicationServer_API.Controllers
+namespace APIServer.Controllers
 {
     public class CommonController : ApiController
     {

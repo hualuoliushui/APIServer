@@ -7,7 +7,7 @@ using APIServer.Services;
 using APIServer.Models;
 using APIServer.Models.CommonModels;
 
-namespace ApplicationServer_API.Services.CommonServices
+namespace APIServer.Services.CommonServices
 {
     class CheckUserService : Service
     {

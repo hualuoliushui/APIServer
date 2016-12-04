@@ -9,7 +9,7 @@ using DAL.DAOVO;
 using APIServer.Models;
 using APIServer.Services;
 
-namespace ApplicationServer_API.Services.CommonServices
+namespace APIServer.Services.CommonServices
 {
 
 

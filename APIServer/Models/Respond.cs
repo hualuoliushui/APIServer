@@ -1,4 +1,4 @@
-﻿namespace ApplicationServer_API.Services
+﻿namespace APIServer.Services
 {
     public class Respond
     {

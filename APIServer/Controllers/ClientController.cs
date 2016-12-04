@@ -8,7 +8,7 @@ using DAL.DAO;
 using DAL.DAOVO;
 using DAL.DAOFactory;
 
-namespace ApplicationServer_API.Controllers
+namespace APIServer.Controllers
 {
     //客户端
     public class ClientController : ApiController

@@ -5,12 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-using ApplicationServer_API.Services;
-using ApplicationServer_API.Services.HostModels;
+using APIServer.Services;
+using APIServer.Services.HostModels;
 using APIServer.Models;
 using APIServer.Models.HostModels;
 
-namespace ApplicationServer_API.Controllers
+namespace APIServer.Controllers
 {
     public class HostController : ApiController
     {

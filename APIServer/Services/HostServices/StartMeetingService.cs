@@ -9,7 +9,7 @@ using DAL.DAOVO;
 using APIServer.Models;
 using APIServer.Services;
 
-namespace ApplicationServer_API.Services.HostModels
+namespace APIServer.Services.HostModels
 {
     public class StartMeetingService : Service
     {
