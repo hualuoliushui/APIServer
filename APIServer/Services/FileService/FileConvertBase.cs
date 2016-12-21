@@ -22,18 +22,39 @@ namespace APIServer.Services.FileService
 
         abstract public bool PPToHTML(string sourcePath, string targetPath, string targetRelativeDirectory);
 
-        protected static bool changePathInHtml(string htmlFilePath, string relativeDirectory)
+        protected static bool changeSrc(string htmlFilePath, string relativeDirectory)
         {
             try
             {
-                string content = File.ReadAllText(htmlFilePath);
+                string content = File.ReadAllText(htmlFilePath,System.Text.Encoding.GetEncoding("GBK"));
                 string pattern = @"src=""([^""]*)""";
                 Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
                 string resultContent = regex.Replace(content, "src=\"" + relativeDirectory + "\\$1\"");
-                File.WriteAllText(htmlFilePath, resultContent);
+                File.WriteAllText(htmlFilePath, resultContent, System.Text.Encoding.GetEncoding("GBK"));
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        protected static bool changeHref(string htmlFilePath, string relativeDirectory)
+        {
+            try
+            {
+                string content = File.ReadAllText(htmlFilePath, System.Text.Encoding.GetEncoding("GBK"));
+                string patternHref = @"href=""([^""]*)""";
+                Regex regexHref = new Regex(patternHref, RegexOptions.IgnoreCase);
+                string resultContent = regexHref.Replace(content, "href=\"" + relativeDirectory + "\\$1\"");
+               
+                string patternSrc = @"src=""([^""]*)""";
+                Regex regex = new Regex(patternSrc, RegexOptions.IgnoreCase);
+                resultContent = regex.Replace(resultContent, "src=\"" + relativeDirectory + "\\$1\"");
+                File.WriteAllText(htmlFilePath, resultContent, System.Text.Encoding.GetEncoding("GBK"));
+                return true;
+            }
+            catch (Exception e)
             {
                 return false;
             }

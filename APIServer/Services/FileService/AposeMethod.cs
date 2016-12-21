@@ -22,7 +22,7 @@ namespace APIServer.Services.FileService
             {
                 Document awd = new Document(sourcePath);
                 awd.Save(targetPath, Aspose.Words.SaveFormat.Html);
-                changePathInHtml(targetPath, targetRelativeDirectory);
+                changeSrc(targetPath, targetRelativeDirectory);
                 return true;
             }
             catch (Exception e)
@@ -38,7 +38,7 @@ namespace APIServer.Services.FileService
             {
                 Workbook book = new Workbook(sourcePath);
                 book.Save(targetPath, Aspose.Cells.SaveFormat.Html);
-                changePathInHtml(targetPath, targetRelativeDirectory);
+                changeSrc(targetPath, targetRelativeDirectory);
                 return true;
             }
             catch (Exception e)

@@ -11,7 +11,10 @@ namespace APIServer.Models
         SUCCESS=0,
         PERMISSION_DENIED=1,
         MEETING_DOES_NOT_OPEN=2,
-        MEETING_HAS_BEEN_OPENED=3
+        MEETING_HAS_BEEN_OPENED=3,
+        FILE_CONVERT_EXCEPTION=4,
+        FILE_CONVERT_FAIL=5,
+        NOTFOUND=6
     }
 
     public class Message
@@ -25,6 +28,9 @@ namespace APIServer.Models
             msgs.Add((int)Status.PERMISSION_DENIED, "无权限");
             msgs.Add((int)Status.MEETING_DOES_NOT_OPEN, "会议未开启");
             msgs.Add((int)Status.MEETING_HAS_BEEN_OPENED, "会议已结束");
+            msgs.Add((int)Status.FILE_CONVERT_EXCEPTION, "文件转换异常");
+            msgs.Add((int)Status.FILE_CONVERT_FAIL, "文件转换失败");
+            msgs.Add((int)Status.NOTFOUND, "页面或文件不见了");
         }
     }
 }

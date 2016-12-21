@@ -57,7 +57,17 @@ namespace APIServer.Controllers
         [HttpGet]
         public HttpResponseMessage DownloadDocument(string documentPath)
         {
-            return FileDownloadService.downloadDocument(documentPath);
+            HttpResponseMessage response = null;
+            FileDownloadService service = new FileDownloadService();
+            Status status = service.downloadDocument(documentPath,out response);
+            if (status != Status.SUCCESS)
+            {
+                Encoding encoding = Encoding.UTF8;
+                byte[] content = encoding.GetBytes(Message.msgs[(int)status]);
+                response.Content = new ByteArrayContent(content);
+                return response;
+            }
+            return response;
         }
 
         //签到，更新参会人员的“IsSignIn”状态，返回开启会议所需的信息：会议基本信息、参会人员信息、议程信息、附件信息、表决信息等
