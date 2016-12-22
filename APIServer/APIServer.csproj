@@ -211,9 +211,6 @@
     <Compile Include="Services\CommonServices\RequestMeetingListService.cs" />
     <Compile Include="Services\CommonServices\SignInService.cs" />
     <Compile Include="Services\CommonServices\UploadVoteResultService.cs" />
-    <Compile Include="Services\FileService\AposeMethod.cs" />
-    <Compile Include="Services\FileService\FileConvertBase.cs" />
-    <Compile Include="Services\FileService\OfficeMethod.cs" />
     <Compile Include="Services\HostServices\CheckUpdateService.cs" />
     <Compile Include="Services\HostServices\EndMeetingService.cs" />
     <Compile Include="Services\HostServices\StartMeetingService.cs" />
