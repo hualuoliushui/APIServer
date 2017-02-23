@@ -31,26 +31,40 @@ namespace APIServer.Controllers
             list.Clear();
             list.Add("meetingID",meetingID);
             List<AgendaVO> agendas = agendaDao.getAll<AgendaVO>(list);
-            foreach (AgendaVO agenda in agendas)
+            if (agendas != null)
             {
-                VoteDAO voteDao = Factory.getInstance<VoteDAO>();
-                VoteOptionDAO voteOptionDao = Factory.getInstance<VoteOptionDAO>();
-                VoteOptionPersonResultDAO voteOptionPersonResultDao = Factory.getInstance<VoteOptionPersonResultDAO>();
-
-                list.Clear();
-                list.Add("agendaID", agenda.agendaID);
-                List<VoteVO> votes = voteDao.getAll<VoteVO>(list);
-             
-                foreach (VoteVO vote in votes)
+                foreach (AgendaVO agenda in agendas)
                 {
-                    list.Clear();
-                    list.Add("voteStatus", 1);
-                    voteDao.update(list,vote.voteID);
+                    VoteDAO voteDao = Factory.getInstance<VoteDAO>();
+                    VoteOptionDAO voteOptionDao = Factory.getInstance<VoteOptionDAO>();
+                    VoteOptionPersonResultDAO voteOptionPersonResultDao = Factory.getInstance<VoteOptionPersonResultDAO>();
 
                     list.Clear();
-                    list.Add("voteID", vote.voteID);
-                    voteOptionPersonResultDao.delete(list);
-        
+                    list.Add("agendaID", agenda.agendaID);
+                    List<VoteVO> votes = voteDao.getAll<VoteVO>(list);
+
+                    if (votes != null)
+                    {
+                        foreach (VoteVO vote in votes)
+                        {
+                            list.Clear();
+                            list.Add("voteStatus", 1);
+                            voteDao.update(list, vote.voteID);
+
+                            list.Clear();
+                            list.Add("voteID", vote.voteID);
+                            List<VoteOptionVO> voteOptionVolist = voteOptionDao.getAll<VoteOptionVO>(list);
+                            if (voteOptionVolist != null)
+                            {
+                                foreach (VoteOptionVO voteOption in voteOptionVolist)
+                                {
+                                    list.Clear();
+                                    list.Add("voteOptionID", voteOption.voteOptionID);
+                                    voteOptionPersonResultDao.delete(list);
+                                }
+                            }
+                        }
+                    }
                 }
             }
 

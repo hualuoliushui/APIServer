@@ -1,0 +1,34 @@
+
+----------------------header--------------------------
+2017-01-03 20:54:04,040 [1] INFO  APILogger - apiserver启动中...
+2017-01-03 20:54:04,219 [1] INFO  APILogger - apiserver已启动
+2017-01-03 21:00:12,455 [6] INFO  APILogger - 文件浏览
+System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 APIServer.Services.CommonServices.FileDownloadService.downloadDocument(String documentPath, HttpResponseMessage& response) 位置 d:\c#_workspace\APIServer\APIServer\Services\CommonServices\FileDownloadService.cs:行号 46
+2017-01-03 21:01:08,787 [6] INFO  APILogger - 文件浏览
+System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 APIServer.Services.CommonServices.FileDownloadService.downloadDocument(String documentPath, HttpResponseMessage& response) 位置 d:\c#_workspace\APIServer\APIServer\Services\CommonServices\FileDownloadService.cs:行号 46
+2017-01-03 21:02:19,926 [6] INFO  APILogger - 文件浏览
+System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 APIServer.Services.CommonServices.FileDownloadService.downloadDocument(String documentPath, HttpResponseMessage& response) 位置 d:\c#_workspace\APIServer\APIServer\Services\CommonServices\FileDownloadService.cs:行号 46
+2017-01-03 21:04:11,446 [12] INFO  APILogger - 文件浏览
+System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 APIServer.Services.CommonServices.FileDownloadService.downloadDocument(String documentPath, HttpResponseMessage& response) 位置 d:\c#_workspace\APIServer\APIServer\Services\CommonServices\FileDownloadService.cs:行号 46
+2017-01-03 21:04:39,864 [12] INFO  APILogger - 文件浏览
+System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 APIServer.Services.CommonServices.FileDownloadService.downloadDocument(String documentPath, HttpResponseMessage& response) 位置 d:\c#_workspace\APIServer\APIServer\Services\CommonServices\FileDownloadService.cs:行号 46
+2017-01-03 21:05:26,107 [14] INFO  APILogger - 文件浏览
+System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 APIServer.Services.CommonServices.FileDownloadService.downloadDocument(String documentPath, HttpResponseMessage& response) 位置 d:\c#_workspace\APIServer\APIServer\Services\CommonServices\FileDownloadService.cs:行号 46

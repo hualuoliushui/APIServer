@@ -7,45 +7,72 @@ using System.Threading;
 using System.Web.Caching;
 using System.Web;
 using APIServer.Models;
+using System.Configuration;
 namespace APIServer.Services.CommonServices
 {
     public class FileDownloadService
     {
         private static Cache filesCache = HttpRuntime.Cache;
 
+        private static string separator = Path.DirectorySeparatorChar.ToString();
+
+        private string GetHtmlDir()
+        {
+            string htmlDir = ConfigurationManager.AppSettings["HtmlDir"];
+            if (string.IsNullOrEmpty(htmlDir))
+            {
+                htmlDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Download");
+            }
+
+            if (!Directory.Exists(htmlDir))
+            {
+                Directory.CreateDirectory(htmlDir);
+            }
+            return htmlDir;
+        }
+
+        private string GetHtmlRelativeDir()
+        {
+            string htmlRelativeDir = ConfigurationManager.AppSettings["htmlRelativeDir"];
+
+            if (string.IsNullOrEmpty(htmlRelativeDir))
+            {
+                htmlRelativeDir = separator + "Download" + separator;
+            }
+
+            return htmlRelativeDir;
+        }
+
+        //返回字符串中，最后一个/之前包括/的字符串
+        private string GetDirectoryName(string path)
+        {
+            int lastPosition = path.LastIndexOf(Path.DirectorySeparatorChar);
+            return path.Substring(0, lastPosition +1 );
+        }
+
         //读取服务器的指定路径文件流，将其做为返回的HttpResponseMessage的Content
         public Status downloadDocument(string documentPath, out HttpResponseMessage response)
         {
             response = new HttpResponseMessage();
             //Log.DebugInfo("开始处理下载文件请求");
-            Mutex mutex = null;
+
+            int fileDownloadCachingTime_Second = Int32.Parse(ConfigurationManager.AppSettings["fileDownloadCachingTime_Second"]);
+           
             try
             {
                 #region 获取文件路径、目录、文件名等
-                //Log.DebugInfo("获取服务器根目录");
-                string rootPath = System.Web.Hosting.HostingEnvironment.MapPath("\\");
-                //获取文件扩展名
-                string fileExtension = System.IO.Path.GetExtension(documentPath);
+                string fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(documentPath);
 
-                //获取文件名,无扩展名
-                string fileName = System.IO.Path.GetFileNameWithoutExtension(documentPath);
+                string fileName = fileNameWithoutExtension + ".html";
 
-                //去除文件扩展名的"."
-                string fileExtensionWithoutPoint = fileExtension.Substring(1, fileExtension.Length - 1);
+                string targetDir = GetHtmlDir() + fileNameWithoutExtension + separator;
 
-                //构造目标文件名
-                string targetFileName = fileName + "_" + fileExtensionWithoutPoint;
-                //构造目标文件相对目录,以目标文件名创建 目录
-                string targetRelativeDirectory = @"upfiles\html" + System.IO.Path.GetDirectoryName(documentPath) + "\\" + targetFileName;
-                //构造目标文件相对路径
-                string targetPath = targetRelativeDirectory + "\\" + targetFileName + ".html";
+                string targetPath = targetDir + fileName;
 
-                //获取目标文件绝对路径
-                string targetAbsolutePath = rootPath + targetPath;
                 #endregion
 
                 #region 检查目标文件信息
-                FileInfo fileInfoTgt = new FileInfo(targetAbsolutePath);
+                FileInfo fileInfoTgt = new FileInfo(targetPath);
 
                 if (!fileInfoTgt.Exists)//目标文件不存在，直接返回
                 {
@@ -58,18 +85,18 @@ namespace APIServer.Services.CommonServices
                 MemoryStream ms = null;
 
                 #region 检查是否存在此文件的缓存
-                if (filesCache[targetAbsolutePath] == null)
+                if (filesCache[targetPath] == null)
                 {
                     //以流的方式下载目标文件
-                    FileStream fs = new FileStream(targetAbsolutePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+                    FileStream fs = new FileStream(targetPath, FileMode.Open, FileAccess.Read, FileShare.Read);
                     MemoryStream temp = new MemoryStream();
                     fs.CopyTo(temp);
                     fs.Close();
-                    filesCache.Add(targetAbsolutePath, temp, null, DateTime.Now.AddSeconds(1), TimeSpan.Zero, CacheItemPriority.Default, null);
+                    filesCache.Add(targetPath, temp, null, DateTime.Now.AddSeconds(fileDownloadCachingTime_Second), TimeSpan.Zero, CacheItemPriority.Default, null);
                 }
                 #endregion
 
-                ms = (MemoryStream)filesCache.Get(targetAbsolutePath);
+                ms = (MemoryStream)filesCache.Get(targetPath);
 
                 #region 设置返回信息
                 response.Content = new ByteArrayContent(ms.ToArray());

@@ -1,0 +1,21 @@
+
+----------------------header--------------------------
+2017-02-23 09:24:51,114 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-02-23 09:24:51,228 [6] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.IO.FileLoadException: 未能加载文件或程序集“MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters)
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 62
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-02-23 09:27:27,719 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-02-23 09:27:28,190 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-02-23 09:27:28,202 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
