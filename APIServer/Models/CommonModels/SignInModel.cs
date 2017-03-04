@@ -33,6 +33,7 @@ namespace APIServer.Models.CommonModels
         public int delegateRole { set; get; }
         public string delegateDetailInfo { set; get; }
         public List<int> delegateAgendaIndexList { set; get; }
+        public int seatIndex { set; get; }
     }
 
     public class SignInAgendaModel

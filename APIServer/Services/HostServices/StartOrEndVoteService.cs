@@ -66,14 +66,24 @@ namespace APIServer.Services.HostModels
         public Status startOrEndVote(int voteID, int startOrEnd)
         {
             VoteVO voteVo = getVote(voteID);
-            if (!validateStatus(voteVo, startOrEnd))
-            {
-                return Status.FAILURE;
-            }
+            //if (!validateStatus(voteVo, startOrEnd))
+            //{
+            //    return Status.FAILURE;
+            //}
             VoteDAO voteDao = Factory.getInstance<VoteDAO>();
 
             Dictionary<string, object> parameterlist = new Dictionary<string, object>();
-            int voteStatus = startOrEnd == 0 ? 2 : 16;
+            //int voteStatus = startOrEnd == 0 ? 2 : 16;
+
+            int voteStatus;
+            if (startOrEnd == 0)
+            {
+                return Status.SUCCESS;
+            }
+            else
+            {
+                voteStatus = 1;
+            }
             //设置表决为voteStatus状态
             parameterlist.Add("voteStatus", voteStatus);
 

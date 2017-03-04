@@ -46,20 +46,20 @@ namespace APIServer.Services.CommonServices
         {
             VoteVO voteVo = getVote(voteID);
             //判断表决是否为开启状态 voteStatus==2
-            if (!IsOpening_vote(voteVo))
-            {
-                return Status.FAILURE;
-            }
+            //if (!IsOpening_vote(voteVo))
+            //{
+            //    return Status.FAILURE;
+            //}
 
-            if (selectIDs == null)
-                return Status.FAILURE;
+            //if (selectIDs == null)
+            //    return Status.FAILURE;
 
             //判断选项个数是否合理 voteType 0:不限，N：最多选择N个（N>0)
-            if(voteVo.voteType != 0
-                && voteVo.voteType < selectIDs.Count)
-            {
-                return Status.FAILURE;
-            }
+            //if(voteVo.voteType != 0
+            //    && voteVo.voteType < selectIDs.Count)
+            //{
+            //    return Status.FAILURE;
+            //}
 
             VoteOptionPersonResultDAO voteOptionPersonResultDao = 
                 Factory.getInstance<VoteOptionPersonResultDAO>();

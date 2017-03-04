@@ -168,7 +168,8 @@ namespace APIServer.Services.CommonServices
                         delegateJob = personVo.personJob,
                         delegateDetailInfo = personVo.personDescription,
                         delegateRole = delegateVo.personMeetingRole,
-                        delegateAgendaIndexList = delegateAgendaIDs
+                        delegateAgendaIndexList = delegateAgendaIDs,
+                        seatIndex = delegateVo.seatIndex
                     });
             }
 

@@ -48,7 +48,7 @@ namespace APIServer.Controllers
                         foreach (VoteVO vote in votes)
                         {
                             list.Clear();
-                            list.Add("voteStatus", 1);
+                            list.Add("voteStatus", 0);
                             voteDao.update(list, vote.voteID);
 
                             list.Clear();

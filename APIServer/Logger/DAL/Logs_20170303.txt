@@ -1,0 +1,348 @@
+
+----------------------header--------------------------
+2017-03-03 13:43:35,529 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 13:44:04,288 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 13:44:28,097 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 13:45:38,469 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 13:51:32,071 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 13:51:34,687 [14] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 13:54:12,221 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:06:24,653 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:07:38,088 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+
+----------------------header--------------------------
+2017-03-03 14:11:49,618 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:11:50,309 [6] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:11:50,397 [6] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-03-03 14:15:32,632 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:15:33,151 [6] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:15:33,243 [6] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+2017-03-03 14:15:55,021 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:16:07,543 [6] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-03-03 14:20:34,280 [5] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:20:38,513 [5] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:20:38,604 [5] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-03-03 14:21:43,099 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:21:53,549 [7] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:21:59,913 [7] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+2017-03-03 14:22:05,160 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:22:09,715 [6] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-03-03 14:22:24,199 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:22:59,183 [7] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:23:12,848 [7] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-03-03 14:24:08,459 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:24:13,024 [6] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:24:35,440 [6] INFO  DalLogger - 数据库访问异常
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.TypeInitializationException: “DAL.DAO.DeviceDAO”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 DAL.Base.DAOBase.getIDMax(String tableName) 位置 d:\c#_workspace\DAL\DAL\Base\DAOBase.cs:行号 66
+   在 DAL.DAO.DeviceDAO..cctor() 位置 d:\c#_workspace\DAL\DAL\DAO\DeviceDAO.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 DAL.DAO.DeviceDAO..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DAL.DAOFactory.Factory.getInstance[T]() 位置 d:\c#_workspace\DAL\DAL\DAOFactory\Factory.cs:行号 12
+
+----------------------header--------------------------
+2017-03-03 14:29:01,050 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:29:01,573 [6] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:29:07,940 [6] INFO  DalLogger - mysql 查询执行 : select * from device where IMEI=@IMEI;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:30:36,731 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:30:36,949 [7] INFO  DalLogger - mysql 查询执行 : select * from device where IMEI=@IMEI;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:31:13,925 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:31:59,650 [6] INFO  DalLogger - mysql 查询执行 : select * from device where IMEI=@IMEI;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'testdalui' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'testdalui'
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   在 MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-03 14:32:21,135 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+
+----------------------header--------------------------
+2017-03-03 14:33:20,664 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:33:22,776 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:33:22,787 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:07,948 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:07,950 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:07,951 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:08,712 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:08,714 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:08,715 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:09,933 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:09,934 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:09,935 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:10,197 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:10,199 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:10,200 [8] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:10,425 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:10,427 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:10,428 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:10,846 [10] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:10,847 [10] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:10,848 [10] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:11,062 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:11,063 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:11,064 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:11,276 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:11,278 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:11,279 [8] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:11,501 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:11,503 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:11,504 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-03 14:34:11,735 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-03 14:34:11,738 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-03 14:34:11,741 [8] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
