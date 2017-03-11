@@ -91,6 +91,18 @@ namespace WebServer.Models.Report
             {
                 if (delegateVos == null)
                     break;
+                delegateVos.Sort((x, y) =>
+                {
+                    if (x.personMeetingRole == 1 && (y.personMeetingRole == 0 || y.personMeetingRole == 2)
+                        || x.personMeetingRole == 2 && y.personMeetingRole == 0)
+                    {
+                        return -1;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
+                });
                 foreach (var vo in delegateVos)
                 {
                     var delegateInfo = new ReportInfo.DelegateInfo();
