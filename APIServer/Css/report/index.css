@@ -1,0 +1,101 @@
+﻿.voteChart{
+    width:400px;
+    height:400px;
+    margin:8px auto;
+}
+body {
+    width: 794px;
+}
+
+h1 {
+    margin-left: 40px;
+}
+#conference-title {
+
+}
+
+p {
+    margin-left: 80px;
+}
+
+#conference-date {
+    margin-left: 20px;
+}
+#conference-place {
+    margin-left: 20px;
+}
+#conference-time {
+    display: table-cell;
+    padding-left: 80px;
+}
+#conference-people-number {
+    display: table-cell;
+    padding-left: 80px;
+}
+#people-number {
+    margin-left: 20px;
+}
+
+div.agenda {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.agenda-time {
+    display: table-cell;
+    width: 200px;
+    padding-left: 60px;
+}
+.agenda-content {
+    display: table-cell;
+    word-wrap:break-word;
+    word-break:break-all;
+    width: 400px;
+}
+.agenda-speaker {
+    display: table-cell;
+    /*width: 50px;*/
+    padding-left: 50px;
+}
+
+
+div.people {
+    margin-left: 40px;
+}
+.people-name {
+    display: table-cell;
+    width: 200px;
+    padding-left: 40px;
+}
+.people-duty {
+    display: table-cell;
+    width: 200px;
+    padding-left: 0px;
+}
+.people-role {
+    display: table-cell;
+    width: 200px;
+    padding-left: 20px;
+}
+
+div.vote{
+    margin-left:40px;
+}
+
+.vote-name{
+    display: table-cell;
+    width: 200px;
+    padding-left: 40px;
+}
+
+.vote-content{
+    display: table-cell;
+    word-wrap:break-word;
+    word-break:break-all;
+    width: 400px;
+}
+
+.vote-type{
+     display: table-cell;
+    width: 200px;
+    padding-left: 20px;
+}

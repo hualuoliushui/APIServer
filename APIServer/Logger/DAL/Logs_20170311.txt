@@ -1,0 +1,274 @@
+
+----------------------header--------------------------
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2017-03-11 09:46:39,737 [8] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-11 09:46:41,056 [8] INFO  DalLogger - mysql 查询执行 : select max(meetingID) from meeting;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:41,079 [8] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingPlaceDAO
+2017-03-11 09:46:42,256 [8] INFO  DalLogger - mysql 查询执行 : select max(meetingPlaceID) from meetingPlace;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:43,378 [8] INFO  DalLogger - mysql 查询执行 : select * from meeting where meetingID=@id;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:43,380 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-11 09:46:44,537 [8] INFO  DalLogger - mysql 查询执行 : select max(delegateID) from delegate;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:44,537 [8] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:46:45,691 [8] INFO  DalLogger - mysql 查询执行 : select max(personID) from person;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:45,692 [8] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-11 09:46:46,845 [8] INFO  DalLogger - mysql 查询执行 : select max(deviceID) from device;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:48,059 [8] INFO  DalLogger - mysql 查询执行 : select * from delegate where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:48,082 [8] DEBUG DalLogger - 访问数据库DAL.DAO.AgendaDAO
+2017-03-11 09:46:49,236 [8] INFO  DalLogger - mysql 查询执行 : select max(agendaID) from agenda;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:49,236 [8] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:46:49,236 [8] DEBUG DalLogger - 访问数据库DAL.DAO.FileDAO
+2017-03-11 09:46:50,390 [8] INFO  DalLogger - mysql 查询执行 : select max(fileID) from file;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:46:51,522 [8] INFO  DalLogger - mysql 查询执行 : select * from agenda where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:47:50,377 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-11 09:47:50,377 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingPlaceDAO
+2017-03-11 09:47:51,539 [6] INFO  DalLogger - mysql 查询执行 : select * from meeting where meetingID=@id;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:47:51,539 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-11 09:47:51,539 [6] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:47:51,539 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-11 09:47:52,667 [6] INFO  DalLogger - mysql 查询执行 : select * from delegate where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:47:52,668 [6] DEBUG DalLogger - 访问数据库DAL.DAO.AgendaDAO
+2017-03-11 09:47:52,668 [6] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:47:52,668 [6] DEBUG DalLogger - 访问数据库DAL.DAO.FileDAO
+2017-03-11 09:47:53,832 [6] INFO  DalLogger - mysql 查询执行 : select * from agenda where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:48:45,675 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-11 09:48:45,675 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingPlaceDAO
+2017-03-11 09:48:46,895 [6] INFO  DalLogger - mysql 查询执行 : select * from meeting where meetingID=@id;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:48:46,897 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-11 09:48:46,897 [6] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:48:46,897 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-11 09:48:48,021 [6] INFO  DalLogger - mysql 查询执行 : select * from delegate where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:48:48,022 [6] DEBUG DalLogger - 访问数据库DAL.DAO.AgendaDAO
+2017-03-11 09:48:48,022 [6] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:48:48,022 [6] DEBUG DalLogger - 访问数据库DAL.DAO.FileDAO
+2017-03-11 09:48:49,155 [6] INFO  DalLogger - mysql 查询执行 : select * from agenda where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:49:04,810 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-11 09:49:04,810 [6] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingPlaceDAO
+2017-03-11 09:49:05,941 [6] INFO  DalLogger - mysql 查询执行 : select * from meeting where meetingID=@id;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:49:05,942 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-11 09:49:05,942 [6] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:49:05,942 [6] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-11 09:49:07,099 [6] INFO  DalLogger - mysql 查询执行 : select * from delegate where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:49:07,099 [6] DEBUG DalLogger - 访问数据库DAL.DAO.AgendaDAO
+2017-03-11 09:49:07,099 [6] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:49:07,099 [6] DEBUG DalLogger - 访问数据库DAL.DAO.FileDAO
+2017-03-11 09:49:08,220 [6] INFO  DalLogger - mysql 查询执行 : select * from agenda where meetingID=@meetingID;
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 DAL.DB.MysqlDB.ExecuteQuery(String commandText, List`1 parameters) 位置 d:\c#_workspace\DAL\DAL\DB\MysqlDB.cs:行号 52
+2017-03-11 09:49:44,037 [15] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-11 09:49:44,037 [15] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingPlaceDAO
+2017-03-11 09:49:51,398 [15] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-11 09:49:51,398 [15] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:49:51,398 [15] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-11 09:49:51,404 [15] DEBUG DalLogger - 访问数据库DAL.DAO.AgendaDAO
+2017-03-11 09:49:51,404 [15] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:49:51,404 [15] DEBUG DalLogger - 访问数据库DAL.DAO.FileDAO
+
+----------------------header--------------------------
+2017-03-11 09:51:38,835 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingDAO
+2017-03-11 09:51:39,201 [7] DEBUG DalLogger - 访问数据库DAL.DAO.MeetingPlaceDAO
+2017-03-11 09:51:39,231 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DelegateDAO
+2017-03-11 09:51:39,233 [7] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:51:39,237 [7] DEBUG DalLogger - 访问数据库DAL.DAO.DeviceDAO
+2017-03-11 09:51:39,263 [7] DEBUG DalLogger - 访问数据库DAL.DAO.AgendaDAO
+2017-03-11 09:51:39,265 [7] DEBUG DalLogger - 访问数据库DAL.DAO.PersonDAO
+2017-03-11 09:51:39,265 [7] DEBUG DalLogger - 访问数据库DAL.DAO.FileDAO
+2017-03-11 09:51:39,277 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteDAO
+2017-03-11 09:51:39,280 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteOptionDAO
+2017-03-11 09:51:39,283 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteOptionPersonResultDAO
+2017-03-11 09:51:39,295 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteDAO
+2017-03-11 09:51:39,295 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteOptionDAO
+2017-03-11 09:51:39,295 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteOptionPersonResultDAO
+2017-03-11 09:51:39,300 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteDAO
+2017-03-11 09:51:39,300 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteOptionDAO
+2017-03-11 09:51:39,300 [7] DEBUG DalLogger - 访问数据库DAL.DAO.VoteOptionPersonResultDAO

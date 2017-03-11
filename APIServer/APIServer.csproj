@@ -200,6 +200,7 @@
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HostController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,6 +210,13 @@
     <Compile Include="Models\CommonModels\SignInModel.cs" />
     <Compile Include="Models\CommonModels\UploadVoteResultModel.cs" />
     <Compile Include="Models\HostModels\CheckUpdateModel.cs" />
+    <Compile Include="Models\Report\ReportInfo\AgendaInfo.cs" />
+    <Compile Include="Models\Report\ReportInfo\DelegateInfo.cs" />
+    <Compile Include="Models\Report\ReportInfo\FileInfo.cs" />
+    <Compile Include="Models\Report\ReportInfo\MeetingInfo.cs" />
+    <Compile Include="Models\Report\ReportInfo\ReportInfo.cs" />
+    <Compile Include="Models\Report\ReportInfo\VoteInfo.cs" />
+    <Compile Include="Models\Report\ReportService.cs" />
     <Compile Include="Services\CommonServices\CheckUserService.cs" />
     <Compile Include="Services\CommonServices\FetchVoteListService.cs" />
     <Compile Include="Services\CommonServices\FetchVoteResultService.cs" />
@@ -281,6 +289,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Css\report\index.css" />
+    <Content Include="Css\report\print.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -294,6 +304,9 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Js\canvas\fabric.js\1.7.6\fabric.min.js" />
+    <Content Include="Js\canvas\flotr2.min.js" />
+    <Content Include="Js\report\index.js" />
     <Content Include="log4net.config" />
     <None Include="Properties\PublishProfiles\api.pubxml" />
     <None Include="Properties\PublishProfiles\APIServer.pubxml" />
@@ -358,6 +371,7 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Report\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
